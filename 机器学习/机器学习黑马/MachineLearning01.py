@@ -88,6 +88,7 @@ def tifidf_demo():
 
     print("特征名字：\n",transer.get_feature_names())
     print("转换后数据：\n",data_final.toarray())
+    print("data_final:\n",data_final)
 
 # 归一化
 def minmax_demo():
