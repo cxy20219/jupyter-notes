@@ -1,3 +1,14 @@
+"""
+    KNN 特点： 
+       1. 在训练前，应该进行无量纲化处理(否则容易受到较大值的影响)
+       1. k取得过小，容易受到异常点影响
+       2. k取得过大，容易受到样本不均衡影响
+    优点：简单易实现，无需训练
+    缺点：
+       1. k值需要合适
+       2. 对测试样本分类时计算量大，内存开销大
+
+"""
 # KNN 算法对鸢尾花分类
 def Knn_iris(): 
     # 1. 获取数据
@@ -11,7 +22,9 @@ def Knn_iris():
     from sklearn.preprocessing import StandardScaler
     transer = StandardScaler()
     x_train = transer.fit_transform(x_train)
-    x_test = transer.fit_transform(x_test)
+
+    # 用训练集的标准来标准化测试集
+    x_test = transer.transform(x_test)
 
     # 4. KNN算法预估器
     from sklearn.neighbors import KNeighborsClassifier
@@ -131,10 +144,10 @@ def decision_iris():
 
 if __name__ == "__main__":
     # 代码一：  KNN 算法对鸢尾花分类
-    # Knn_iris()
+    Knn_iris()
     # 代码二： 模型调优：添加网格搜索和交叉验证
     # Knn_iris_gscv()
     # 代码三： 朴素贝叶斯算法对新闻分类
     # nb_news()
     # 代码四： 用决策树对鸢尾花分类
-    decision_iris()
+    # decision_iris()
