@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="petal length (cm) <= 2.45\nentropy = 1.585\nsamples = 112\nvalue = [37, 38, 37]"] ;
+1 [label="entropy = 0.0\nsamples = 37\nvalue = [37, 0, 0]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="petal width (cm) <= 1.75\nentropy = 1.0\nsamples = 75\nvalue = [0, 38, 37]"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="petal length (cm) <= 5.05\nentropy = 0.172\nsamples = 39\nvalue = [0, 38, 1]"] ;
+2 -> 3 ;
+4 [label="entropy = 0.0\nsamples = 37\nvalue = [0, 37, 0]"] ;
+3 -> 4 ;
+5 [label="sepal width (cm) <= 2.75\nentropy = 1.0\nsamples = 2\nvalue = [0, 1, 1]"] ;
+3 -> 5 ;
+6 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 1, 0]"] ;
+5 -> 6 ;
+7 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 0, 1]"] ;
+5 -> 7 ;
+8 [label="entropy = 0.0\nsamples = 36\nvalue = [0, 0, 36]"] ;
+2 -> 8 ;
+}
