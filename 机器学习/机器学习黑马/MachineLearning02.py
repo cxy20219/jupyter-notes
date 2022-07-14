@@ -235,4 +235,6 @@ if __name__ == "__main__":
     # 代码三： 朴素贝叶斯算法对新闻分类
     # nb_news()
     # 代码四： 用决策树对鸢尾花分类
-    decision_iris()
+    # decision_iris()
+    # 代码五： 随机森林
+    RandomForest()
