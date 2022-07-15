@@ -227,6 +227,31 @@ def RandomForest():
     # 法二 计算准确率
     score = estimator2.score(x_test,y_test)
     print("准确率：\n",score)
+
+
+"""
+    K-Means:聚类算法
+    k-means算法基本步骤:
+        (1)从数据中选择k个对象作为初始聚类中心;
+        (2)计算每个聚类对象到聚类中心的距离来划分类别；
+        (3)再次计算每个聚类中心
+        (4)计算标准测度函数，直到达到最大迭代次数或与原中心点一样，则停止，否则，继续操作。
+    
+    适用场景:没有目标值
+"""
+def K_Means():
+    # 聚类预估器
+    # from sklearn.cluster import KMeans
+    # estimator = KMeans(n_clusters=3)
+    # estimator.fit(data)
+    # predict = estimator.predict(data)
+
+    # 聚类算法评估，轮廓系数
+    # from sklearn.metrics import silhouette_score
+    # silhouette_score(data,predict)
+
+    pass
+
 if __name__ == "__main__":
     # 代码一：  KNN 算法对鸢尾花分类
     # Knn_iris()
@@ -238,3 +263,5 @@ if __name__ == "__main__":
     # decision_iris()
     # 代码五： 随机森林
     RandomForest()
+    # 代码六：Kmeans 聚类
+    # K_Means()
